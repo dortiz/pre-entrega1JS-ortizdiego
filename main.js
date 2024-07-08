@@ -1,12 +1,4 @@
-// Definición de productos
-const productos = [
-    { nombre: 'Llaveros', precio: 1500.00 },
-    { nombre: 'Tarjetas de Presentación', precio: 18000.00 },
-    { nombre: 'Flyers', precio: 3600.00 },
-    { nombre: 'Sellos', precio: 4500.00 },
-    { nombre: 'Agendas', precio: 11200.00 },
-    { nombre: 'Jarros termicos', precio: 6800.00 }
-];
+import { productos } from './stock.js';
 
 // Función para mostrar productos
 function mostrarProductos() {
