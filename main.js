@@ -1,7 +1,4 @@
-// main.js
-import {
-    productos
-} from './stock.js';
+import { productos } from './stock.js';
 
 const carrito = [];
 
@@ -103,8 +100,14 @@ function finalizarCompra() {
         alert("El carrito está vacío.");
         return;
     }
-    alert(`El total de tu compra es: $${calcularTotal().toFixed(2)}\n¡Gracias por tu compra!`);
+    let mensaje = "Productos en tu carrito:\n";
+    carrito.forEach((producto, index) => { 
+        mensaje += `${index + 1}. ${producto.nombre}\n`;
+    });
+    mensaje += `\nTotal: $${calcularTotal().toFixed(2)}\n¡Gracias por tu compra!`;
+    alert(mensaje);
     carrito.length = 0; // Vaciar el carrito
+    return false; 
 }
 
 // Ejecución del programa
@@ -132,7 +135,7 @@ while (continuar) {
             eliminarProductoDelCarrito();
             break;
         case '7':
-            finalizarCompra();
+            continuar = finalizarCompra();
             break;
         case '8':
             continuar = false;
