@@ -47,3 +47,7 @@ const productos = [{
         cantidad: 0
     }
 ];
+
+export {
+    productos
+};
